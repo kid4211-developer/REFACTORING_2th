@@ -7,6 +7,7 @@
 const invoice = require('./invoices.json');
 const plays = require('./plays.json');
 
+/* statement() 안에 중첩함수로 들어가 있는 문제가 여전히 남아있음 */
 function statement(invoice, plays) {
     let result = `======================================\n`;
     result += `청구 내역 <고객명 : ${invoice.customer}>\n`;

@@ -1,4 +1,4 @@
-/* 단계 쪼개기 */
+/* 다형성(Polymorphism)을 활용해 계산 코드 재구성하기 */
 const createStatementData = require('./createStatementData.js');
 const invoice = require('./invoices.json');
 const plays = require('./plays.json');
@@ -8,7 +8,7 @@ function statement(invoice, plays) {
 }
 
 function renderPlainText(data) {
-    let result = `청구 내역 <고객명 : ${data.customer}\n`;
+    let result = `청구 내역 || 고객명 : ${data.customer}\n`;
     for (let perf of data.performances) {
         result += `${perf.play.name} : ${krw(perf.amount)} (${perf.audience} 석)\n`;
     }
